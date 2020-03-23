@@ -1,0 +1,197 @@
+/* Form */
+#contact-form label {
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Congratulation message */
+#contact-form #sucess {
+    display: block;
+    padding: 10px;
+    margin:20px 0 0 150px;
+    width: 350px;
+    text-align: center;
+    border: 3px solid #1A1A1A;
+    background-color:#ccc;
+    border-radius:10px;
+    text-align:center;
+}
+
+#contact-form #sucess h2{
+    background:none;
+    padding-bottom:10px;
+    float:none;
+}
+
+#contact-form #sucess p{
+    width:auto;
+    float:none;
+}
+
+/* Error message */
+#contact-form .MsgError {
+    Display: block;
+    padding: 10px;
+    margin: 40px auto;
+    width: 400px;
+    text-align: center;
+    border: 3px solid #1A1A1A;
+    background-color:#ccc;
+    border-radius:3px;
+}
+
+#contact-form .MsgError h1 {
+    background: url(../images/MsgError.gif) no-repeat 0 0;
+    padding-left: 20px;
+    height: 85px;
+    line-height: 85px;
+    color: #CC0000;
+}
+
+.MsgSent p, .MsgError p {
+    font-size: 1.3em;
+    color:#999;
+}
+
+/***** FormCheck *****/
+
+#contact-form .error {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    left: 50%;
+    bottom: 100%;
+    margin: 0 0 5px -50%;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+    background: #c0392b;
+    border-radius: 5px;
+    padding: 10px 7px 10px 2em;
+    border: solid 1px #902b20;
+}
+
+#contact-form .error:after {
+    content: '';
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-top-color: #902b20;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+#contact-form .error:before{
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: '\f071 ';
+    font-size: 1rem;
+    transition: all 0.2s;
+    left: 0.5rem;
+    float: left;
+    display: inline-block;
+    width: 1.1rem;
+    top: 50%;
+    margin-top: -0.5rem;
+}
+
+/*Forms defaults - change as needed*/
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #404040;
+    border-radius: 4px;
+    border: none;
+
+    background:#cce6f3;
+    box-shadow: inset 0 0 2px 1px #66b3dc;
+    -moz-box-shadow: inset 0 0 2px 1px #66b3dc;
+    -webkit-box-shadow: inset 0 0 2px 1px #66b3dc;
+
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#contact-form label {
+    color:#fff;
+    cursor:pointer;
+    padding:7px 10px 0 0;
+    line-height:21px;
+    font-size:18px;
+    float: left;
+    width: 161px;
+    text-align:right;
+}
+
+#contact-form label:first-child {
+    margin-top: 0;
+}
+
+#contact-form [placeholder]::-webkit-input-placeholder{
+    color:#002031;
+    opacity: 0.5;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#contact-form [placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.2s 0.2s ease; 
+    opacity: 0;
+}
+
+#contact-form input:focus, #contact-form textarea:focus{
+    background:#cce6f3;
+    box-shadow: inset 0 0 2px 1px #66b3dc;
+    -moz-box-shadow: inset 0 0 2px 1px #66b3dc;
+    -webkit-box-shadow: inset 0 0 2px 1px #66b3dc;
+}
+
+/*Text inputs*/
+
+#contact-form .message-block textarea{
+    width:100%;
+    height: 85px;
+    padding: 5px;
+    margin-top: 3px;
+    font-family: 'Source Sans Pro', sans-serif;
+    float: right;
+}
+
+#contact-form .submit-block{
+    float:right;
+    clear:both;
+}
+
+/*Button*/
+#contact-form input[type="submit"]{
+    padding:8px 10px;
+    background: #004063;
+    box-shadow: none;
+    color: #fff;
+    text-shadow: #333;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    /* IE6-9 fallback on horizontal gradient */
+    transition: all 1s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#contact-form input[type="submit"]:hover{
+    background:#336682;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/****/
+
+#contact-form .reference-block{
+    display:none;
+}

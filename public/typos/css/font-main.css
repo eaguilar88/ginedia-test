@@ -1,0 +1,40 @@
+/* WEBFONTS */
+@font-face {
+    font-family: 'FrutiCn';
+    src: url('../files/FrutiCnLight.woff2') format('woff2'),
+        url('../files/FrutiCnLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FrutiCn';
+    src: url('../files/FrutiCnRegular.woff2') format('woff2'),
+        url('../files/FrutiCnRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FrutiCn';
+    src: url('../files/FrutiCnBold.woff2') format('woff2'),
+        url('../files/FrutiCnBold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FrutiCn';
+    src: url('../files/FrutiCnBlack.woff2') format('woff2'),
+        url('../files/FrutiCnBlack.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FrutiCn';
+    src: url('../files/FrutiCnExtraBlack.woff2') format('woff2'),
+        url('../files/FrutiCnExtraBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

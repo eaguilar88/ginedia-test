@@ -1,0 +1,66 @@
+/* PURE FIXES */
+
+.l-box {
+    padding: 0.5em;
+}
+
+.pad-025{
+    padding: 0.25em;
+}
+
+.pad-05{
+    padding: 0.5em;
+}
+
+.pad-1{
+    padding: 1em;
+}
+
+.pad-2{
+    padding: 2em;
+}
+
+.mar-1{
+    margin: 1em;
+}
+
+.z-2{
+    z-index: 2;
+}
+
+.z-3{
+    z-index: 2;
+}
+
+.z-9{
+    z-index: 9;
+}
+
+z-99{
+    z-index: 99;
+}
+
+z-999{
+    z-index: 999;
+}
+
+.firstElem{
+    padding-left:0;
+    margin-left: 0;
+}
+
+.lastElem{
+    padding-right:0;
+    margin-right: 0;
+}
+
+.uniqueElem{
+    padding-left:0;
+    padding-right:0;
+    margin: auto 0;
+}
+
+.finishElem{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
