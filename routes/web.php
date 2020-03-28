@@ -12,6 +12,7 @@
 */
 
 Route::model('category', 'App\Category');
+Route::model('subcategory', 'App\Subcategory');
 
 Route::get('inicio', 'CategoryController@index');
 Route::get('/la-empresa', function () {
@@ -19,5 +20,5 @@ Route::get('/la-empresa', function () {
 })->name('about-us');
 Route::get('/', 'CategoryController@index')->name('home');
 Route::get('categories/{category}/{slug?}', 'CategoryController@show')->name('categories.show');
+Route::get('subcategories/{subcategory}/{slug?}', 'SubcategoryController@show')->name('subcategories.show');
 
-Route::model('subcategory', 'App\Subcategory');
