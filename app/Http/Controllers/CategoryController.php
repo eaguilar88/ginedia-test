@@ -39,8 +39,19 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        $subcategorias = $category->subcategories();
-        return view('categories.show', ['category', $category, 'subcategories' => $subcategorias]);
+        $subcategories = $category->subcategories;
+        return view('categories.show', ['category', $category, 'subcategories' => $subcategories]);
+    }
+
+    function x()
+    {
+        $categories = App\Category::with('subcategories')->get();
+        foreach ($categories as $category) {
+            $path = "public/images/$category->slug/";
+            foreach ($category->subcategories as $subcategory) {
+                \Storage::makeDirectory($path.$subcategory->slug);
+            }
+        }
     }
 
 }

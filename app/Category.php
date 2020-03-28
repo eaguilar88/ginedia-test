@@ -10,6 +10,7 @@ use Propaganistas\LaravelFakeId\RoutesWithFakeIds;
 class Category extends Model
 {
     use RoutesWithFakeIds;
+    private $subcategories;
 
     /**
      * Subcategory 1 -N relationship

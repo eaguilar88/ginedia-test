@@ -20,5 +20,5 @@ Route::get('/la-empresa', function () {
 })->name('about-us');
 Route::get('/', 'CategoryController@index')->name('home');
 Route::get('categories/{category}/{slug?}', 'CategoryController@show')->name('categories.show');
-Route::get('subcategories/{subcategory}/{slug?}', 'SubcategoryController@show')->name('subcategories.show');
+Route::get('categories/{category}/subcategories/{subcategory}/{slug?}', 'SubcategoryController@show')->name('subcategories.show');
 

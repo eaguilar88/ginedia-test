@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Category;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
 
 /**
@@ -11,17 +11,17 @@ use Illuminate\Database\Eloquent\Collection;
 class Repository implements RepositoryInterface
 {
 
-    protected $categoryModel;
+    protected $model;
 
     /**
      * __construct
      *
-     * @param mixed $category
+     * @param mixed $model
      * @return void
      */
-    public function __construct(Category $category)
+    public function __construct(Model $model)
     {
-        $this->categoryModel = $category;
+        $this->model = $model;
     }
 
 
@@ -33,7 +33,7 @@ class Repository implements RepositoryInterface
      */
     public function findAll(array $relationships)
     {
-        return $this->categoryModel->with($relationships)->get();
+        return $this->model->with($relationships)->get();
     }
 
     /**
@@ -44,6 +44,6 @@ class Repository implements RepositoryInterface
      */
     public function findOne(int $id)
     {
-        return $this->categoryModel->find($id);
+        return $this->model->find($id);
     }
 }
