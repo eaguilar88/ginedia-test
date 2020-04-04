@@ -1,11 +1,11 @@
 <header>
     <section class="wrapper">
         <figure id="logo">
-            <a href="{{route('home')}}"><img class="svg" src="{{ asset("images/logo.svg") }}"/></a>
+            <a href="{{route('home')}}"><img class="svg" src="{{ asset("storage/images/logo.svg") }}"/></a>
         </figure>
 
         <nav class="menu">
-            <figure><img src="{{ asset("images/flags.svg") }}"/></figure>
+            <figure><img src="{{ asset("storage/images/flags.svg") }}"/></figure>
             <ul>
                 <li>
                     <a class="@if (request()->path() == "nosotros") {{ "active" }} @endif" href="la-empresa">

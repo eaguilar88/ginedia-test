@@ -6,6 +6,7 @@ use App\Category;
 use App\Repositories\Repository;
 use App\Subcategory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class SubcategoryController extends Controller
 {
@@ -19,7 +20,7 @@ class SubcategoryController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|View
      */
     public function index()
     {
@@ -31,11 +32,33 @@ class SubcategoryController extends Controller
      * Display the specified resource.
      *
      * @param Subcategory $subcategory
-     * @return void
+     * @return \Illuminate\Contracts\View\Factory|View
      */
     public function show(Category $category, Subcategory $subcategory)
     {
-        $products = $subcategory->products();
-        return view('subcategories.show', ['category', $category]);
+        $products = $subcategory->products;
+        $products->each(function ($product) {
+            $product->finish = $this->getFinish($product->finish);
+        });
+        return view('subcategories.show', ['category' => $category, 'subcategory' => $subcategory, 'products' => $products]);
+    }
+
+    protected
+    function getFinish($value)
+    {
+        switch ($value) {
+            case "1":
+                return "pulido";
+            case "2":
+                return "satinado";
+            case "3":
+                return "pulido o satinado";
+            case "4":
+                return "pulido y satinado";
+            case "5":
+                return "dual pulido/satinado";
+            default:
+                return "";
+        }
     }
 }

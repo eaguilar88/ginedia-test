@@ -1,15 +1,15 @@
 <footer>
     <section class="wrapper">
         <article class="a-panel">
-            <img class="f-logo" src="{{ asset('images/logoNegativo.svg') }}">
-            <img class="mini" src="{{ asset('images/catalogo.jpg') }}" />
+            <img class="f-logo" src="{{ asset('storage/images/logoNegativo.svg') }}">
+            <img class="mini" src="{{ asset('storage/images/catalogo.jpg') }}" />
             <a class="download" download href="download/Catalogo Ginedia 2016.pdf"><span><i class="fa fa-download"></i></span><br>Descargar catálogo 2016</a>
             </ul>
         </article>
 
         <article class="b-panel">
             <h2>Venezuela</h2>
-            <figure><img src="{{ asset('images/ve_flag.svg') }}" /></figure>
+            <figure><img src="{{ asset('storage/images/ve_flag.svg') }}" /></figure>
 
             <p>Carretera vieja de Baruta, Km. 5, Sector Industrial La Naya, Centro Gandión SS2, Local 5, Baruta 1080. Caracas - Venezuela.</p>
 
@@ -26,7 +26,7 @@
         </article>
         <article class="c-panel">
             <h2>Panamá</h2>
-            <figure><img src="{{ asset('images/pa_flag.svg') }}"/></figure>
+            <figure><img src="{{ asset('storage/images/pa_flag.svg') }}"/></figure>
 
             <p>Calle 14 Pueblo Nuevo Al lado de Cristales y Perfiles. Ciudad de Panamá.</p>
 

@@ -4,16 +4,12 @@
     Expertos en Herrajes para Vidrio
 @endsection
 
-@php
-    $current_page = "home";
-@endphp
-
 @section('content')
-    <section class="container wrapper {{ $current_page }}>">
+    <section class="container wrapper home>">
         <article class="grid">
             @foreach($categories as $category)
                 <figure>
-                    <img src="{{ asset("images/home/$category->slug.jpg") }}" alt="{{ $category->name }}"/>
+                    <img src="{{ asset("storage/images/home/$category->slug.jpg") }}" alt="{{ $category->name }}"/>
                     <figcaption>
                         <h2>{{ $category->name }}</h2>
                         <a href="{{ route('categories.show',['category'=> $category, 'slug' => $category->slug]) }}"></a>
