@@ -20,6 +20,8 @@ class CategoryController extends Controller
 
     /**
      * Display a listing of the resource.
+     * Uses Repository method findAll
+     * Receives an array with the relationships we want to fetch along the resources
      *
      * @return Factory|View
      */
@@ -32,18 +34,24 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
-     * @param Optimus $optimus
-     * @param string $slug
+     * @param Category $category
      * @return Factory|View
      */
-    public function show(int $id, $slug = "")
+    public function show(Category $category)
     {
-        $category = $this->model->findOne($id);
-//        if ($slug != $category->slug) {
-//            return redirect()->to($category->url);
-//        }
-        return view('categories.show', ['category', $category]);
+        $subcategories = $category->subcategories;
+        return view('categories.show', ['category', $category, 'subcategories' => $subcategories]);
+    }
+
+    function x()
+    {
+        $categories = App\Category::with('subcategories')->get();
+        foreach ($categories as $category) {
+            $path = "public/images/$category->slug/";
+            foreach ($category->subcategories as $subcategory) {
+                \Storage::makeDirectory($path.$subcategory->slug);
+            }
+        }
     }
 
 }

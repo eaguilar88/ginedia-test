@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-    @yield('title')
+    <title> Ginedia | @yield('title') </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -18,6 +18,8 @@
     <link rel='stylesheet' type='text/css' media='all and (max-width: 1279px)' href='{{ asset('css/standard.css') }}' />
     <link rel="stylesheet" type="text/css" href="{{ asset('typos/css/font-awesome.min.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('typos/css/font-main.css') }}" />
+
+    @livewireStyles
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('js/myForm.js') }}"></script>
@@ -48,5 +50,6 @@
 @yield('sidebar')
 @yield('content')
 @include('includes.footer')
+@livewireScripts
 </body>
 </html>

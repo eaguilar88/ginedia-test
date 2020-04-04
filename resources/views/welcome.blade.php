@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Ginedia | Expertos en Herrajes para Vidrio</title>
+    Expertos en Herrajes para Vidrio
 @endsection
 
 @php
@@ -33,7 +33,7 @@
                     <ul>
                         @foreach($category->subcategories as $subcategory)
                             <li class="box">
-                                <a href="{{ route('categories.show',['category'=> $category, 'slug' => $category->slug]) }}">
+                                <a href="{{ route('subcategories.show',['category' => $category,'subcategory'=> $subcategory, 'slug' => $subcategory->slug]) }}">
                                 </a>
                                 {{ $subcategory->name }}
                             </li>
