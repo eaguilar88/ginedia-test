@@ -9,10 +9,16 @@
         @livewire('sidebar')
         <article class="display">
             <ul class="calabaza">
-                @foreach($product as $product)
+                @foreach($products as $product)
                     <li class="box">
-                        <img src="{{ asset("images/category/$product->subcategory->category/subcategory/$product->subcategory/product/$product->code.jpg")}}" alt="{{ $product->slug }}">
+                        <a src="{{ asset($product->image_path) }}"></a>
+                        <img src="{{ asset($product->image_path) }}" alt="{{ $product->slug }}"/>
+                        <h4>{{ $product->code }}</h4>
                         <h3>{{ $product->name }}</h3>
+                        @if($product->description != "")
+                            <p>{{ $product->description }}</p>
+                        @endif
+                        <p>Acabado {{ $product->finish }}</p>
                     </li>
                 @endforeach
             </ul>

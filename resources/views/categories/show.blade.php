@@ -13,7 +13,7 @@
                     <li class="box">
                         <a href="{{ route('subcategories.show',['category' => $subcategory->category, 'subcategory'=> $subcategory, 'slug' => $subcategory->slug]) }}">
                         </a>
-                        <img src="{{ asset("images/category/$subcategory->category/subcatery/$subcategory->id.jpg")}}" alt="{{ $subcategory->slug }}">
+                        <img src="{{ asset("storage/images/". $subcategory->category->slug ."/$subcategory->slug.jpg")}}" alt="{{ $subcategory->slug }}">
                         <h3>{{ $subcategory->name }}</h3>
                     </li>
                 @endforeach
