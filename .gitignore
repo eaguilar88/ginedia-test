@@ -15,3 +15,4 @@ _ide_helper.php
 .styleci.yml
 /.idea
 /.vscode
+/nbproject/private/
