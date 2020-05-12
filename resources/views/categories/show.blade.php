@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    <section class="container wrapper categoria">
+    <section class="container wrapper" id="categoria">
         @livewire('sidebar')
         <article class="display">
-            <ul class="calabaza">
+            <ul class="calabaza v-flex">
                 @foreach($subcategories as $subcategory)
                     <li class="box">
                         <a href="{{ route('subcategories.show',['category' => $subcategory->category, 'subcategory'=> $subcategory, 'slug' => $subcategory->slug]) }}">
