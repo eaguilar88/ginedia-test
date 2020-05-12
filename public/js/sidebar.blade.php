@@ -1,4 +1,4 @@
-<aside class="grid" id="grid">
+<aside class="grid">
     <ul>
         @foreach($categories as $category)
             <li>
