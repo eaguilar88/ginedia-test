@@ -15,7 +15,8 @@ class ProductsImagePathSeeder extends Seeder
         foreach ($products as $product) {
             $subcategory = App\Subcategory::find($product->subcategory_id);
             $category = $subcategory->category()->get();
-            $product->image_path = "storage/images/" . $subcategory->category->slug . "/$subcategory->slug/$product->code.jpg";
+            $product->image_path = "storage/images/" . $subcategory->category->slug . "/$subcategory->slug/"
+                . str_replace(" ", "-", $product->code) . ".jpg";
             $product->save();
         }
     }

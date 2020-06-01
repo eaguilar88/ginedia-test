@@ -39,12 +39,12 @@ class SubcategoryController extends Controller
         $products = $subcategory->products;
         $products->each(function ($product) {
             $product->finish = $this->getFinish($product->finish);
+            $product->zoomPath = $this->getZoomPath($product->image_path);
         });
         return view('subcategories.show', ['category' => $category, 'subcategory' => $subcategory, 'products' => $products]);
     }
 
-    protected
-    function getFinish($value)
+    protected function getFinish($value)
     {
         switch ($value) {
             case "1":
@@ -60,5 +60,11 @@ class SubcategoryController extends Controller
             default:
                 return "";
         }
+    }
+
+    protected function getZoomPath($path)
+    {
+        $id = substr($path, strrpos($path, '/'));
+        return substr_replace($path, "zoom", strrpos($path, '/') + 1) . $id;
     }
 }
