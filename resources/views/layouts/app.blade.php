@@ -20,7 +20,6 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}?d=<?php echo time(); ?>" />
         <link rel="stylesheet" type="text/css" media='all and (max-width: 1599px)' href="{{ asset('css/notebook.css') }}?d=<?php echo time(); ?>" />
         <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.css') }}?d=<?php echo time(); ?>" />
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/myForm.css') }}?d=<?php echo time(); ?>" />
 
         @livewireStyles
 
@@ -38,12 +37,8 @@
 
         <!-- Compiled and minified jQuery for the Contact Form -->
         <script type="text/javascript" src="{{ asset('js/scripts.js?') }}d=<?php echo time(); ?>"></script>
-        <script type="text/javascript" src="{{ asset('js/form.script.js') }}?d=<?php echo time(); ?>"></script>
-        <script type="text/javascript" src="{{ asset('lib/jquery.form.js') }}"></script>
         <!--script src="https://www.google.com/recaptcha/api.js?render=6Ld-68UUAAAAABOSbMSXQtatr8l04k9X3XKEIh_U"></script-->
 
-        <script type="text/javascript" src="{{ asset('js/myForm.js') }}"></script>
-        
         <!-- Gallery PlugIn -->
         <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
         <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
@@ -62,12 +57,15 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body >
+    <div id="root">
         @include('includes.analytics')
         @include('includes.header')
         @yield('sidebar')
         @yield('content')
         @include('includes.footer')
+    </div>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         @livewireScripts
     </body>
 </html>

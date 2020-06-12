@@ -1,12 +1,3 @@
-$(function () {
-    $("article.display ul li a").MultiDialog({
-        gallery: {
-            enabled: false,
-            loop: false
-        }
-    });
-});
-
 $(document).ready(function () {
     var $currentCat = 2;
     var $currentSubCat = Number(2.3);
@@ -22,4 +13,3 @@ $(document).ready(function () {
         }
     });
 });
-    
