@@ -504,23 +504,34 @@ ul{
 }
 
 #home .grid figure:nth-of-type(1) h2, #home .grid figure:nth-of-type(2) h2{
-    text-align: left;
+    /*text-align: left;*/
 }
 
 #home .grid figure:nth-of-type(1) h2, #home .grid figure:nth-of-type(5) h2{
-    text-align: right;
+    /*text-align: right;*/
 }
 
 #home .grid figure:nth-of-type(5) h2, #home .grid figure:nth-of-type(6) h2{
-    text-align: right;
+    /*text-align: right;*/
 }
 
 #home .grid figure:nth-of-type(2n) h2{
-    margin-top: 160px;
+    /*margin-top: 160px;*/
 }
 
 #home .grid figure:nth-of-type(3) h2{
     /*padding: 40% 0 10px 0;*/
+}
+
+#home .grid figure figcaption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .grid figure figcaption h2{
+    text-align: center;
+    font-weight: 700;
 }
 
 #home .grid figure p {
