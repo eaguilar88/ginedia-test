@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Ginedia | Ginedia | Acerca de la empresa
+    Acerca de la empresa
 @endsection
 
 @section('content')
