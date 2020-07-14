@@ -1,0 +1,232 @@
+body.locked{
+    overflow: hidden;
+}
+
+#header {
+    height: auto;
+    background: url(../images/bg_pattern.jpg) #fff repeat;
+}
+
+#header #logo {
+    margin: 1rem 0 1rem 5rem;
+}
+
+#main-links{
+    display: -webkit-box;
+    display: flex;
+    padding: 0;
+    font-weight: bold;
+    overflow-x: scroll;
+    clear: both;
+}
+
+#main-links ul{
+    margin: 0 auto;
+    display: flex;
+    padding-left: 0;
+}
+
+#main-links a{
+    flex: 1 1 1px;
+    display: block;
+    position: relative;
+    padding: 1rem 1rem;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 200;
+    white-space: nowrap;
+}
+
+#sublinks{
+    position: absolute;
+    height: calc(100vh - 14.5rem);
+    top: 10rem;
+    z-index: -1;
+    overflow-y: scroll;
+    transform: translateY(-150%);
+    transition: transform .25s ease-in;
+    background-color: #f8f8f8;
+}
+
+.expand #sublinks{
+    transform: none;
+    transform: translateY(0);
+    transition: transform .25s ease-out;
+    z-index: 99;
+}
+
+.inner_nav{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.inner_nav a{
+    display: block;
+    padding: 1.4rem 1.8rem .5rem;
+    position: relative;
+    transition: background-color .15s;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    text-align: left;
+    font-weight: 400;
+}
+
+.bordered_section {
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding-bottom: 1.4rem !important;
+}
+
+.inner_nav li.sub_cat{
+    text-indent: 1.5rem;
+}
+
+.contact_info{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.contact_info li{
+    display: block;
+    padding: 1.4rem 1.8rem .5rem;
+    position: relative;
+    transition: background-color .15s;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    text-align: left;
+    font-weight: 400;
+}
+
+/*------ GENERAL ------*/
+
+.container{
+    overflow-y: auto;
+}
+
+.container header h1 {
+    font-size: 4rem;
+}
+
+.container header h1 span {
+    font-size: 4rem;
+}
+
+
+@media all and (orientation: portrait) {
+    #header #logo svg, #header #logo .svg{
+        width: 12rem;
+        height: calc(12rem * 0.3128);
+        padding: 0;
+    }
+
+    main.container{
+        padding-bottom: 7rem;
+    }
+    .container header{
+        background-position: bottom;
+    }
+
+    .container header, .container header img{
+        height: auto;
+    }
+
+    .container header h1{
+        margin: 2rem auto 2.5rem;
+    }
+
+    .container header h1, .container header h1 span {
+        font-size: 3rem;
+    }
+}
+
+/*----- Menu ------*/
+
+div.burger {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 99;
+}
+div.x,
+div.y,
+div.z {
+    position: absolute; margin: auto;
+    top: 0px; bottom: 0px;		
+    background: #55111C;
+    border-radius:2px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}		
+
+div.x, div.y, div.z {     
+    height: .2rem;
+    width: 2rem;
+}
+
+div.x{top: 0}
+div.y{top: 1.5rem;}
+div.z{top: 3rem;}
+div.collapse{
+    top: 20px;
+    background:#55111C;
+    -webkit-transition: all 70ms ease-out;
+    -moz-transition: all 70ms ease-out;
+    -ms-transition: all 70ms ease-out;
+    -o-transition: all 70ms ease-out;
+    transition: all 70ms ease-out;
+}
+
+
+div.rotate30{
+    -ms-transform: rotate(30deg); 
+    -webkit-transform: rotate(30deg); 
+    transform: rotate(30deg);	
+    -webkit-transition: all 50ms ease-out;
+    -moz-transition: all 50ms ease-out;
+    -ms-transition: all 50ms ease-out;
+    -o-transition: all 50ms ease-out;
+    transition: all 50ms ease-out;					
+}
+div.rotate150{
+    -ms-transform: rotate(150deg); 
+    -webkit-transform: rotate(150deg); 
+    transform: rotate(150deg);	
+    -webkit-transition: all 50ms ease-out;
+    -moz-transition: all 50ms ease-out;
+    -ms-transition: all 50ms ease-out;
+    -o-transition: all 50ms ease-out;
+    transition: all 50ms ease-out;					
+}
+
+div.rotate45{
+    -ms-transform: rotate(45deg); 
+    -webkit-transform: rotate(45deg); 
+    transform: rotate(45deg);	
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;					
+}
+div.rotate135{
+    -ms-transform: rotate(135deg); 
+    -webkit-transform: rotate(135deg); 
+    transform: rotate(135deg);	
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;					
+}

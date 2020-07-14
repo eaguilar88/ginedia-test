@@ -20,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}?d=<?php echo time(); ?>" />
         <link rel="stylesheet" type="text/css" media='all and (max-width: 1599px)' href="{{ asset('css/notebook.css') }}?d=<?php echo time(); ?>" />
         <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.css') }}?d=<?php echo time(); ?>" />
+        <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.menu.css') }}?d=<?php echo time(); ?>" />
 
         @livewireStyles
 
