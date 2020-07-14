@@ -6,7 +6,7 @@
  *
  * Motto: "Every business should have a mobile detection script to detect mobile readers"
  *
- * Mobile_Detect is a lightweight PHP class for detecting mobile devices (including tablets).
+ * MobileDetect is a lightweight PHP class for detecting mobile devices (including tablets).
  * It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.
  *
  * @author      Current authors: Serban Ghita <serbanghita@gmail.com>
@@ -25,7 +25,7 @@
  *
  * @version     2.8.22
  */
-class Mobile_Detect {
+class MobileDetect {
 
     /**
      * Mobile detection type.
