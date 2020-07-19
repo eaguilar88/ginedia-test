@@ -1,5 +1,6 @@
 <?php
 
+namespace App;
 /**
  * Mobile Detect Library
  * =====================

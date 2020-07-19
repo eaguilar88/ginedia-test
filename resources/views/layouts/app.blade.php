@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
-        <link rel="icon" type="image/png" href="images/icon.png">
+        <link rel="icon" type="image/png" href="{{ asset('storage/images/icon.png') }}">
         <link rel="shortcut icon" href="{{ route('home') }}">
 
         <!-- Compiled and minified CSS -->
@@ -18,10 +18,10 @@
 
         <!-- Main CSS -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}?d=<?php echo time(); ?>" />
-        <link rel="stylesheet" type="text/css" media='all and (max-width: 1599px)' href="{{ asset('css/notebook.css') }}?d=<?php echo time(); ?>" />
-        <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.css') }}?d=<?php echo time(); ?>" />
-        <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.menu.css') }}?d=<?php echo time(); ?>" />
-
+        @if ($agent->isMobile())
+            <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.css') }}?d=<?php echo time(); ?>" />
+            <link rel="stylesheet" type="text/css" media='all and (max-width: 1112px)' href="{{ asset('css/mobile.menu.css') }}?d=<?php echo time(); ?>" />
+        @endif
         @livewireStyles
 
         <!-- Compiled and minified jQuery from Google Library -->
@@ -61,12 +61,18 @@
     <body >
     <div id="root">
         @include('includes.analytics')
-        @include('includes.header')
+        @if ($agent->isMobile())
+            @include('includes.m.header')
+        @else
+            @include('includes.header')
+        @endif
         @yield('sidebar')
         @yield('content')
         @include('includes.footer')
     </div>
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    @if ($agent->isMobile())
+        <script type="text/javascript" src="{{ asset('js/mobile_menu.js') }}"></script>
+    @endif
         @livewireScripts
     </body>
 </html>

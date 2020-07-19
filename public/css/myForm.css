@@ -5,31 +5,31 @@
     font-size: 1.2rem;
 }
 
-#contact-form input[type=text]:focus:not([readonly]), 
-#contact-form input[type=password]:focus:not([readonly]), 
-#contact-form input[type=email]:focus:not([readonly]), 
-#contact-form input[type=url]:focus:not([readonly]), 
-#contact-form input[type=time]:focus:not([readonly]), 
-#contact-form input[type=date]:focus:not([readonly]), 
-#contact-form input[type=datetime-local]:focus:not([readonly]), 
-#contact-form input[type=tel]:focus:not([readonly]), 
-#contact-form input[type=number]:focus:not([readonly]), 
-#contact-form input[type=search]:focus:not([readonly]), 
+#contact-form input[type=text]:focus:not([readonly]),
+#contact-form input[type=password]:focus:not([readonly]),
+#contact-form input[type=email]:focus:not([readonly]),
+#contact-form input[type=url]:focus:not([readonly]),
+#contact-form input[type=time]:focus:not([readonly]),
+#contact-form input[type=date]:focus:not([readonly]),
+#contact-form input[type=datetime-local]:focus:not([readonly]),
+#contact-form input[type=tel]:focus:not([readonly]),
+#contact-form input[type=number]:focus:not([readonly]),
+#contact-form input[type=search]:focus:not([readonly]),
 #contact-form textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #66b3dc;
     box-shadow: 0 1px 0 0 #66b3dc;
 }
 
-#contact-form input[type=text]:focus:not([readonly])+label, 
-#contact-form input[type=password]:focus:not([readonly])+label, 
-#contact-form input[type=email]:focus:not([readonly])+label, 
-#contact-form input[type=url]:focus:not([readonly])+label, 
-#contact-form input[type=time]:focus:not([readonly])+label, 
-#contact-form input[type=date]:focus:not([readonly])+label, 
-#contact-form input[type=datetime-local]:focus:not([readonly])+label, 
-#contact-form input[type=tel]:focus:not([readonly])+label, 
-#contact-form input[type=number]:focus:not([readonly])+label, 
-#contact-form input[type=search]:focus:not([readonly])+label, 
+#contact-form input[type=text]:focus:not([readonly])+label,
+#contact-form input[type=password]:focus:not([readonly])+label,
+#contact-form input[type=email]:focus:not([readonly])+label,
+#contact-form input[type=url]:focus:not([readonly])+label,
+#contact-form input[type=time]:focus:not([readonly])+label,
+#contact-form input[type=date]:focus:not([readonly])+label,
+#contact-form input[type=datetime-local]:focus:not([readonly])+label,
+#contact-form input[type=tel]:focus:not([readonly])+label,
+#contact-form input[type=number]:focus:not([readonly])+label,
+#contact-form input[type=search]:focus:not([readonly])+label,
 #contact-form textarea.materialize-textarea:focus:not([readonly])+label {
     color: #66b3dc;
 }
@@ -64,8 +64,8 @@
     box-shadow: 0 1px 0 0 #66b3dc;
 }
 
-#contact-form input, 
-#contact-form textarea, 
+#contact-form input,
+#contact-form textarea,
 #contact-form textarea.materialize-textarea{
     color: #fff;
 }
