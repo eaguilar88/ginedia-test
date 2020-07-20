@@ -34,6 +34,6 @@ class AppServiceProvider extends ServiceProvider
                 $category->name = str_replace($blackList,"",$category->name);
             }
         }
-        View::share(['agent' => $detect, 'categories' => $categories]);
+        View::share(['agent' => $detect, 'categoriesMobile' => $categories]);
     }
 }

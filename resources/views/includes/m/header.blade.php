@@ -11,9 +11,9 @@
         </figure>
 
         <section id="main-links">
-            <nav class="">
+            <nav>
                 <ul>
-                    @foreach($categories as $category)
+                    @foreach($categoriesMobile as $category)
                         <li>
                             <a href="{{ route('categories.show',['category'=> $category, 'slug' => $category->slug]) }}">{{ $category->name }}</a>
                         </li>
@@ -23,10 +23,10 @@
         </section>
 
         <section id="sublinks">
-            <nav class="" role="navigation">
+            <nav role="navigation">
                 <ul class="inner_nav">
                     <li><a href="{{route('about-us')}}" class="bordered_section">¿Quiénes somos?</a></li>
-                    @foreach($categories as $category)
+                    @foreach($categoriesMobile as $category)
                         <li class="">
                             <a href="{{ route('categories.show',['category'=> $category, 'slug' => $category->slug]) }}">{{ $category->name }}</a>
                         </li>
