@@ -1,5 +1,5 @@
-body {
-    font-size: 10px;
+html, body {
+    font-size: 13px;
 }
 
 body .wrapper {
@@ -192,11 +192,11 @@ body.locked{
         font-weight: bold;
     }
 
-    .productos .display ul li {
+    #subcategoria .box {
         width: 46%;
     }
 
-    .productos .display ul li:nth-child(2n+1) {
+    #subcategoria .box:nth-child(2n+1) {
         clear: left;
     }
 

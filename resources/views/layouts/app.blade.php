@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title> Ginedia | @yield('title') </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
