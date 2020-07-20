@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Category;
 use App\MobileDetect;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $detect = new MobileDetect();
-        View::share('agent', $detect);
+        $categories =  Category::with('subcategories')->get();
+        View::share(['agent' => $detect, 'categories' => $categories]);
     }
 }
