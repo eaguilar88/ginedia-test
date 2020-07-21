@@ -4,44 +4,59 @@ body.locked{
 
 #header {
     height: auto;
-    background: url(../storage/images/bg_pattern.jpg) #fff repeat;
+}
+
+#header ul li {
+    float: none;
 }
 
 #header #logo {
-    margin: 1rem 0 1rem 5rem;
+    margin: 1rem 0 1rem 6rem;
 }
 
 #main-links{
     display: -webkit-box;
     display: flex;
-    padding: 0;
+    padding: 0 0 0 1rem;
     font-weight: bold;
     overflow-x: scroll;
     clear: both;
+}
+
+
+#main-links nav{
+    width: auto;
+    height: auto;
+    line-height: inherit;
 }
 
 #main-links ul{
     margin: 0 auto;
     display: flex;
     padding-left: 0;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    float: right;
 }
 
 #main-links a{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
     flex: 1 1 1px;
     display: block;
     position: relative;
     padding: 1rem 1rem;
     color: #000;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 200;
     white-space: nowrap;
 }
 
 #sublinks{
     position: absolute;
-    height: calc(100vh - 14.5rem);
-    top: 10rem;
+    height: calc(100vh - 12rem);
     z-index: -1;
     overflow-y: scroll;
     transform: translateY(-150%);
@@ -64,15 +79,17 @@ body.locked{
 
 .inner_nav a{
     display: block;
-    padding: 1.4rem 1.8rem .5rem;
+    padding: 1.8rem 2.1rem .5rem;
     position: relative;
     transition: background-color .15s;
     color: #000;
     text-transform: uppercase;
-    font-size: 1.3rem;
-    line-height: 1.3rem;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
     text-align: left;
-    font-weight: 400;
+    font-weight: 300;
+    -webkit-text-stroke-width: .45px;
+    -webkit-text-stroke-color: #000;
 }
 
 .bordered_section {
@@ -120,8 +137,8 @@ body.locked{
 
 @media all and (orientation: portrait) {
     #header #logo svg, #header #logo .svg{
-        width: 12rem;
-        height: calc(12rem * 0.3128);
+        width: 14rem;
+        height: calc(14rem * 0.3128);
         padding: 0;
     }
 
@@ -143,16 +160,23 @@ body.locked{
     .container header h1, .container header h1 span {
         font-size: 3rem;
     }
+    
+    #categoria .display ul li {
+        width: 46%;
+        float: left;
+        position: relative;
+        margin: 1%;
+    }
 }
 
 /*----- Menu ------*/
 
 div.burger {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 2.5rem;
     position: absolute;
     top: 1rem;
-    left: 1rem;
+    left: 2rem;
     cursor: pointer;
     z-index: 99;
 }
@@ -172,12 +196,13 @@ div.z {
 
 div.x, div.y, div.z {
     height: .2rem;
-    width: 2rem;
+    width: 2.5rem;
 }
 
 div.x{top: 0}
-div.y{top: 1.5rem;}
-div.z{top: 3rem;}
+div.y{top: 1.75rem;}
+div.z{top: 3.5rem;}
+
 div.collapse{
     top: 20px;
     background:#55111C;
@@ -228,5 +253,9 @@ div.rotate135{
     -moz-transition: all 100ms ease-out;
     -ms-transition: all 100ms ease-out;
     -o-transition: all 100ms ease-out;
-    transition: all 100ms ease-out;
+    transition: all 100ms ease-out;			
+}
+
+#home .grid figure figcaption h2{
+    font-size: 2rem;
 }
