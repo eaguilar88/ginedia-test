@@ -5,7 +5,8 @@ $(document).ready(function () {
         var click = 'click';
     }
 
-    $('div.burger').on(click, function () {
+    $('div.burger').on(click, function (e) {
+        e.preventDefault();
         if (!$(this).hasClass('open')) {
             openMenu();
         } else {

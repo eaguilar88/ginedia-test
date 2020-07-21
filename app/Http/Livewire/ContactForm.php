@@ -26,7 +26,7 @@ class ContactForm extends Component
             'message' => 'required',
         ]);
         try {
-            Mail::to('support@ginedia.test')->send(new Contact($validateData));
+            Mail::to('ginedia@hotmail.com')->send(new Contact($validateData));
             session()->flash('message', 'Mensaje enviado');
             session()->flash('type', 'success');
         } catch (\Exception $e) {
