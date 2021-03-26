@@ -2,7 +2,7 @@
     <section class="wrapper v-flex">
         <article class="a-panel">
             <img class="f-logo" src="{{ asset('storage/images/logoNegativo.svg') }}" alt="logo"/>
-            <a class="download" download="" href="{{ asset('catalogo_ginedia_2021.pdf') }}"><span><i class="fa fa-download" aria-hidden="true"></i></span><br>Descargar catálogo 2016</a>
+            <a class="download" download="" href="{{ asset('storage/catalogo_ginedia_2021.pdf') }}"><span><i class="fa fa-download" aria-hidden="true"></i></span><br>Descargar catálogo 2016</a>
         </article>
 
         <article class="b-panel v-flex">
