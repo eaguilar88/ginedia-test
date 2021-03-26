@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <section class="container wrapper {{ url()->current() }}">
+    <section class="container wrapper" id="{{ url()->current() }}">
         <h2>Comercializadora Ginedia</h2>
         <img src="{{ asset('images/acerca-de.jpg') }}" />
         <p>Nos dedicamos a la  importación, distribución y comercialización de puertas automáticas, herrajes y accesorios para la industria del vidrio arquitectónico de interiores y exteriores, fachadas de edificios, construcciones comerciales y residenciales.<br><br>
