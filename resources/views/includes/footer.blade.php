@@ -10,7 +10,7 @@
         <article class="b-panel">
             <h2>Venezuela</h2>
             <figure><img src="{{ asset('images/ve_flag.svg') }}" /></figure>
-            <a class="download" download="" href="{{ asset('catalogo_ginedia_2021.pdf') }}"><span><i class="fa fa-download" aria-hidden="true"></i></span><br>Descargar catálogo 2016</a>
+
             <p>Carretera vieja de Baruta, Km. 5, Sector Industrial La Naya, Centro Gandión SS2, Local 5, Baruta 1080. Caracas - Venezuela.</p>
 
             <h2>Contacto</h2>
