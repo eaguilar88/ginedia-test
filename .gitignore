@@ -15,5 +15,3 @@ _ide_helper.php
 .styleci.yml
 /.idea
 /.vscode
-.DS_Store
-/storage/.DS_Store
