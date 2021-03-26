@@ -2,83 +2,69 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Repositories\Repository;
+use App\Subcategory;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class SubcategoryController extends Controller
 {
+    protected $model;
+
+    public function __construct(Subcategory $subcategory)
+    {
+        $this->model = new Repository($subcategory);
+    }
+
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|View
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        $subcategories = $this->model->findAll(['products']);
+        return view('subcategories.show', ['subcategories' => $subcategories]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Subcategory $subcategory
+     * @return \Illuminate\Contracts\View\Factory|View
      */
-    public function show($id)
+    public function show(Category $category, Subcategory $subcategory)
     {
-        //
+        $products = $subcategory->products;
+        $products->each(function ($product) {
+            $product->finish = $this->getFinish($product->finish);
+            $product->zoomPath = $this->getZoomPath($product->image_path);
+        });
+        return view('subcategories.show', ['category' => $category, 'subcategory' => $subcategory, 'products' => $products]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    protected function getFinish($value)
     {
-        //
+        switch ($value) {
+            case "1":
+                return "pulido";
+            case "2":
+                return "satinado";
+            case "3":
+                return "pulido o satinado";
+            case "4":
+                return "pulido y satinado";
+            case "5":
+                return "dual pulido/satinado";
+            default:
+                return "";
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    protected function getZoomPath($path)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $id = substr($path, strrpos($path, '/'));
+        return substr_replace($path, "zoom", strrpos($path, '/') + 1) . $id;
     }
 }

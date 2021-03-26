@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Ginedia | Ginedia | Acerca de la empresa</title>
+    Acerca de la empresa
 @endsection
 
 @section('content')
-    <section class="container wrapper {{ url()->current() }}">
+    <section class="container wrapper" id="{{ url()->current() }}">
         <h2>Comercializadora Ginedia</h2>
-        <img src="{{ asset('images/acerca-de.jpg') }}" />
+        <img src="{{ asset('storage/images/acerca-de.jpg') }}" />
         <p>Nos dedicamos a la  importación, distribución y comercialización de puertas automáticas, herrajes y accesorios para la industria del vidrio arquitectónico de interiores y exteriores, fachadas de edificios, construcciones comerciales y residenciales.<br><br>
             La calidad y responsabilidad es nuestra mayor carta de presentación, comercializamos productos de excelente calidad seleccionados por su robustez y diseños contemporáneos, los cuales son elaborados por las principales empresas del ramo a nivel mundial; ofreciendo una línea innovadora con las nuevas tendencias del mercado a precios muy competitivos para las soluciones arquitectónicas de nuestros clientes.<br><br>
             Nos destacamos por ofrecer atención personalizada y asesoramiento adecuado para cada una de sus necesidades.</p>
